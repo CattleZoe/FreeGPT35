@@ -45,7 +45,7 @@ docker compose up -d
 
 ```bash
 mkdir freegpt35 && cd freegpt35
-wget -O compose.yaml https://raw.githubusercontent.com/missuo/FreeGPT35/main/compose_with_next_chat.yaml
+wget -O compose.yaml https://raw.githubusercontent.com/CattleZoe/FreeGPT35/main/compose_with_next_chat.yaml
 docker compose up -d
 ```
 
