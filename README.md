@@ -24,11 +24,11 @@ node app.js
 ### Docker
 
 ```bash
-docker run -p 3040:3040 ghcr.io/missuo/freegpt35
+docker run -p 6699:6699 ghcr.io/missuo/freegpt35
 ```
 
 ```bash
-docker run -p 3040:3040 missuo/freegpt35
+docker run -p 6699:6699 missuo/freegpt35
 ```
 
 ### Docker Compose
@@ -65,7 +65,7 @@ After deployment, you can directly access `http://[IP]:3040/v1/chat/completions`
 
 ```nginx
 location ^~ / {
-        proxy_pass http://127.0.0.1:3040; 
+        proxy_pass http://127.0.0.1:6699; 
         proxy_set_header Host $host; 
         proxy_set_header X-Real-IP $remote_addr; 
         proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for; 
@@ -87,8 +87,8 @@ location ^~ / {
 
 ```nginx
 upstream freegpt35 {
-        server 1.1.1.1:3040;
-        server 2.2.2.2:3040;
+        server 1.1.1.1:6699;
+        server 2.2.2.2:6699;
 }
 
 location ^~ / {
@@ -115,7 +115,7 @@ location ^~ / {
 **You don't have to pass Authorization, of course, you can also pass any string randomly.**
 
 ```bash
-curl http://127.0.0.1:3040/v1/chat/completions \
+curl http://127.0.0.1:6699/v1/chat/completions \
   -H "Content-Type: application/json" \
   -H "Authorization: Bearer any_string_you_like" \
   -d '{
