@@ -37,7 +37,7 @@ docker run -p 6699:6699 missuo/freegpt35
 
 ```bash
 mkdir freegpt35 && cd freegpt35
-wget -O compose.yaml https://raw.githubusercontent.com/missuo/FreeGPT35/main/compose.yaml
+wget -O compose.yaml https://raw.githubusercontent.com/CattleZoe/FreeGPT35/main/compose.yaml
 docker compose up -d
 ```
 
